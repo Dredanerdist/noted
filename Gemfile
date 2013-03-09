@@ -1,62 +1,17 @@
 source 'https://rubygems.org'
 
-%w{cache core gen helpers}.each do |p|
-  gem "padrino-#{p}", '0.10.7'
-end
+gem 'rails', '4.0.0.beta1'
 
-gem 'puma'
+gem 'unicorn'
 
-gem 'rake'
-gem 'sinatra-flash', require: 'sinatra/flash'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.0.1'
 
-gem 'bson_ext', require: 'mongo'
-gem 'mongo_mapper'
+gem 'jquery-rails'
 
-gem 'canable'
+group :assets do
+  gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.beta1'
 
-gem 'state_machine'
-
-gem 'redis'
-
-gem 'bcrypt-ruby'
-gem 'base32-crockford', require: 'base32/crockford'
-
-gem 'haml'
-
-gem 'maruku'
-
-gem 'compass'
-gem 'susy'
-
-gem 'barista'
-
-gem 'log_buddy'
-
-group :development, :test do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
-
-group :development do
-  gem 'foreman'
-  gem 'execjs'
-  gem 'pry'
-end
-
-group :test do
-  gem 'rack-test', require: 'rack/test'
-
-  gem 'rspec'
-  gem 'shoulda-matchers'
-  gem 'autotest'
-  gem 'fuubar'
-
-  gem 'mocha', require: 'mocha/api'
-  gem 'capybara', require: 'capybara/dsl'
-
-  gem 'spork'
-  gem 'factory_girl'
-  gem 'database_cleaner'
-
-  gem 'cane'
+  gem 'uglifier', '>= 1.0.3'
 end
